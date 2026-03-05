@@ -96,13 +96,13 @@ The game runs entirely using Python’s standard library.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOURUSERNAME/elmwood-ghetto-rpg.git
+git clone https://github.com/loganggoodwin/Elmwood-ghetto.git
 ```
 
 Navigate to the folder:
 
 ```bash
-cd elmwood-ghetto-rpg
+cd Elmwood-ghetto
 ```
 
 Run the game:
@@ -138,7 +138,7 @@ Village Day 1 | Turns left: 10
 ## Project Structure
 
 ```
-elmwood-ghetto-rpg
+Elmwood-ghetto
 │
 ├── elmwood_ghetto.py
 ├── README.md
@@ -148,7 +148,7 @@ elmwood-ghetto-rpg
 Future versions may include:
 
 ```
-elmwood-ghetto-rpg
+Elmwood-ghetto
 │
 ├── game/
 │   ├── combat.py
@@ -210,7 +210,10 @@ This project is open source and released under the **MIT License**.
 Created by **Logan Garth Goodwin**
 
 GitHub:
-https://github.com/YOURUSERNAME
+https://github.com/loganggoodwin
+
+Repository:
+https://github.com/loganggoodwin/Elmwood-ghetto
 
 ---
 
