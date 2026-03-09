@@ -1,224 +1,217 @@
-# Elmwood Ghetto
+# Legend of Elmwood Ghetto – Python Game
 
-*A Turn-Based Text RPG for Python*
+A **Legend of Zelda–inspired action adventure** built with **Python and Pygame**.
+This project focuses on learning **game architecture, sprite systems, combat mechanics, and world design** while creating a playable adventure inspired by the Elmwood neighborhood concept map.
 
-## Overview
-
-**Elmwood Ghetto** is a text-based, turn-based fantasy RPG inspired by classic tabletop games and early computer RPGs. The game takes place in a gritty medieval peasant village where players fight monsters, gain experience, collect loot, and survive day-to-day life in a harsh fantasy world.
-
-Players create a character, battle enemies, visit the village market, and grow stronger over time. Each in-game day provides **10 turns**, requiring players to carefully choose how to spend their time.
-
-This project is designed to be **simple, expandable, and beginner-friendly**, making it a good starting point for experimenting with Python game development.
+The game uses a **full Zelda-style engine**, including textures, sound support, map systems, and modular code structure.
 
 ---
 
-## Features
+# Features
 
-### Character Creation
+## 🗺 Overworld Adventure
 
-* Choose your character name
-* Begin as a peasant adventurer
-* Gain experience and level up
+Explore a top-down world inspired by the Elmwood map.
 
-### Turn-Based Gameplay
+Areas include:
 
-* Each in-game day contains **10 turns**
-* Actions consume turns (combat, market visits, etc.)
-* Rest and recover at the start of each new day
+* Courtyard training area
+* Old Shophouses
+* Trade Post Road
+* Elmwood Projects district
+* Ancient Cave dungeon
+* Elmwood streets and pathways
 
-### Combat System
-
-* Fight monsters such as:
-
-  * Sewer Rats
-  * Goblins
-  * Skeletons
-  * Bandits
-  * Trolls
-* Critical hits
-* Armor damage reduction
-* Escape mechanics
-
-### Experience & Leveling
-
-* Earn **XP** for defeating enemies
-* Level up to increase:
-
-  * Health
-  * Attack
-  * Defense
-  * Critical chance
-
-### Loot System
-
-Enemies can drop:
-
-* Weapons
-* Armor
-* Potions
-* Random treasure items
-
-Loot rarity levels include:
-
-* Common
-* Uncommon
-* Rare
-* Epic
-
-### Village Hub
-
-Players can visit the village between battles to:
-
-* Fight monsters
-* Enter the arena
-* Buy items from the market
-* Sell loot
-* Equip gear
-* Duel other players locally
-
-### PvP Duels
-
-Local **hot-seat PvP mode** allows two players to duel using turn-based combat.
+The game world uses a **camera-follow system**, minimap, and area detection overlay.
 
 ---
 
-## Requirements
+## ⚔ Combat System
 
-* Python **3.9 or newer**
-* No external libraries required
+Real-time combat inspired by classic Zelda games.
 
-The game runs entirely using Python’s standard library.
+Features include:
 
----
+* Sword attacks
+* Enemy damage and knockback
+* Health system
+* Enemy AI movement
+* Boss encounter inside the cave
 
-## Installation
+Enemies include:
 
-Clone the repository:
-
-```bash
-git clone https://github.com/loganggoodwin/Elmwood-ghetto.git
-```
-
-Navigate to the folder:
-
-```bash
-cd Elmwood-ghetto
-```
-
-Run the game:
-
-```bash
-python elmwood_ghetto.py
-```
+* Lizalfos-style creatures
+* Street bandits
+* Dungeon boss (Tunnel Warden)
 
 ---
 
-## Example Gameplay
+## 👤 Player Systems
 
-```
-=== Elmwood Ghetto ===
-A grimy little medieval village where peasants dream of glory.
+The player character includes:
 
-Name your character: Rowan
+* Health system
+* Magic energy
+* Experience points
+* Level progression
+* Rupee currency
 
-Village Day 1 | Turns left: 10
+Leveling increases:
 
-1) Hunt monsters
-2) Arena
-3) Market
-4) Sell items
-5) Inventory
-6) PvP duel
-7) End day
-8) Quit
-```
+* Maximum health
+* Maximum magic
+* Combat durability
 
 ---
 
-## Project Structure
+## ✨ Magic System
+
+The player can use healing magic.
+
+Key features:
+
+* Magic energy pool
+* Healing spell restores health
+* Magic replenishes on level up
+
+This introduces a simple **resource management system** similar to Zelda magic mechanics.
+
+---
+
+## 🧰 Interactive World
+
+The world includes multiple interactive systems:
+
+NPC Characters
+You can speak with characters for hints and information.
+
+Treasure Chests
+Relics and rupees can be discovered throughout the map.
+
+Relic Progression
+Three relics must be collected before entering the cave dungeon.
+
+Trade System
+NPC merchants can restore health in exchange for rupees.
+
+---
+
+## 🧭 Quest System
+
+The main progression loop:
+
+1. Train in the **Courtyard**
+2. Explore the districts
+3. Recover **three relics**
+4. Unlock the **Ancient Cave**
+5. Defeat the **Tunnel Warden**
+
+The interface displays:
+
+* Current area
+* Quest hint
+* Player stats
+* Rupee count
+* Relic progress
+
+---
+
+# 🎮 Controls
+
+| Key                      | Action          |
+| ------------------------ | --------------- |
+| **W A S D / Arrow Keys** | Move            |
+| **Space**                | Sword attack    |
+| **E**                    | Interact / talk |
+| **Left CTRL**            | Use magic heal  |
+| **M**                    | Upgrade menu    |
+| **Q**                    | Switch weapon   |
+| **R**                    | Restart game    |
+
+---
+
+# ▶ Running the Game
+
+### 1. Install Python
+
+Make sure Python **3.10+** is installed.
+
+You can check with:
 
 ```
-Elmwood-ghetto
-│
-├── elmwood_ghetto.py
-├── README.md
-└── LICENSE
-```
-
-Future versions may include:
-
-```
-Elmwood-ghetto
-│
-├── game/
-│   ├── combat.py
-│   ├── enemies.py
-│   ├── items.py
-│   ├── world.py
-│   └── player.py
-│
-├── elmwood_ghetto.py
-└── README.md
+python --version
 ```
 
 ---
 
-## Planned Features
+### 2. Install Dependencies
 
-Future improvements may include:
+Install Pygame:
 
-* Character classes (Warrior, Rogue, Mage)
-* Magic spells and abilities
-* Quests and storylines
-* Save/load game system
-* Expanded world map
-* Multiplayer combat system
-* Procedural dungeon generation
-* Boss monsters
-* Reputation system for villages
+```
+pip install pygame
+```
 
 ---
 
-## Contributing
+### 3. Run the Game
 
-Contributions are welcome.
+Navigate to the project folder and run:
 
-You can help by:
+```
+python Code/Main.py
+```
 
-* Adding monsters
-* Expanding loot tables
-* Improving combat mechanics
-* Creating quests
-* Improving balance
-
-To contribute:
-
-1. Fork the repository
-2. Create a new branch
-3. Submit a pull request
+The game window should open and start the Elmwood adventure.
 
 ---
 
-## License
+# 🧪 Technologies Used
 
-This project is open source and released under the **MIT License**.
-
----
-
-## Author
-
-Created by **Logan Garth Goodwin**
-
-GitHub:
-https://github.com/loganggoodwin
-
-Repository:
-https://github.com/loganggoodwin/Elmwood-ghetto
+* Python
+* Pygame
+* Sprite-based game engine
+* Modular game architecture
+* Tile-based map system
+* Event-driven input handling
+* Basic AI enemy behavior
 
 ---
 
-## Final Notes
+# 📌 Future Improvements
 
-This project is meant to be **fun, expandable, and easy to modify**. The code is intentionally straightforward so developers can experiment with mechanics, combat systems, and game design ideas.
+Possible future upgrades include:
 
-Welcome to **Elmwood Ghetto** — where peasants fight monsters and legends begin.
+* Custom Elmwood tile set and buildings
+* Inventory and equipment system
+* Expanded magic spells
+* Sound effects and music
+* NPC quest chains
+* Larger overworld map
+* Dungeon puzzles
+* Multiplayer battles
+* Dialogue trees
+* Save / load system
+
+---
+
+# Author
+
+**Logan Garth Goodwin**
+
+IT and Cybersecurity professional focused on learning through **hands-on experimentation, building projects, and solving technical problems**.
+
+I enjoy working with:
+
+* networking
+* system design
+* cybersecurity
+* programming projects
+* game development experiments
+
+LinkedIn
+https://www.linkedin.com/in/logan-g-goodwin/
+
+---
+
+If you enjoy the project or want to improve it, feel free to fork the code and experiment with your own ideas.
