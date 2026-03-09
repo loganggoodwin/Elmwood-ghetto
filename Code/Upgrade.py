@@ -1,4 +1,3 @@
-import imp
 from traceback import print_tb
 import pygame
 from Settings import *
