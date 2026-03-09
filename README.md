@@ -1,52 +1,73 @@
 # Legend of Elmwood Ghetto – Python Game
 
 A **Legend of Zelda–inspired action adventure** built with **Python and Pygame**.
-This project focuses on learning **game architecture, sprite systems, combat mechanics, and world design** while creating a playable adventure inspired by the Elmwood neighborhood concept map.
+This project is a learning experiment focused on **game logic, sprite systems, world interaction, and event-driven programming** while creating a playable adventure inspired by the Elmwood concept map.
 
-The game uses a **full Zelda-style engine**, including textures, sound support, map systems, and modular code structure.
+The game uses a **Zelda-style engine architecture** including player combat, enemy AI, tile maps, and UI systems.
+
+---
+
+# Important: Python Version
+
+This project is designed to run using:
+
+**Python 3.12**
+
+Earlier Python versions may behave differently and older versions of the Zelda tutorial code may not run correctly without modifications.
+
+Tested with:
+
+* Python **3.12**
+* Pygame **2.6+**
+
+You can check your Python version with:
+
+```
+python --version
+```
 
 ---
 
 # Features
 
-## 🗺 Overworld Adventure
+## Overworld Exploration
 
-Explore a top-down world inspired by the Elmwood map.
+Explore a top-down overworld inspired by the Elmwood map.
 
 Areas include:
 
 * Courtyard training area
-* Old Shophouses
+* Old Shophouses district
 * Trade Post Road
-* Elmwood Projects district
+* Elmwood Projects
 * Ancient Cave dungeon
-* Elmwood streets and pathways
+* Open Elmwood streets
 
-The game world uses a **camera-follow system**, minimap, and area detection overlay.
+The camera follows the player while exploring the map.
 
 ---
 
-## ⚔ Combat System
+## Combat System
 
-Real-time combat inspired by classic Zelda games.
+Real-time sword combat inspired by classic Zelda games.
 
 Features include:
 
-* Sword attacks
+* Sword attack system
 * Enemy damage and knockback
 * Health system
 * Enemy AI movement
-* Boss encounter inside the cave
+* Dungeon boss encounter
 
-Enemies include:
+Enemy types currently include:
 
-* Lizalfos-style creatures
+* Lizalfos
 * Street bandits
-* Dungeon boss (Tunnel Warden)
+* Cave boss
 
 ---
 
-## 👤 Player Systems
+## Player Systems
 
 The player character includes:
 
@@ -56,95 +77,94 @@ The player character includes:
 * Level progression
 * Rupee currency
 
-Leveling increases:
-
-* Maximum health
-* Maximum magic
-* Combat durability
+Leveling increases player survivability and restores health.
 
 ---
 
-## ✨ Magic System
+## Magic System
 
-The player can use healing magic.
+The player can use a healing ability powered by magic energy.
 
-Key features:
-
-* Magic energy pool
-* Healing spell restores health
-* Magic replenishes on level up
-
-This introduces a simple **resource management system** similar to Zelda magic mechanics.
+Magic is limited and must be managed carefully during combat.
 
 ---
 
-## 🧰 Interactive World
+## Interactive World
 
-The world includes multiple interactive systems:
+The game includes several interactive systems:
 
 NPC Characters
-You can speak with characters for hints and information.
+Players can talk to characters to receive hints.
 
 Treasure Chests
-Relics and rupees can be discovered throughout the map.
+Hidden chests contain rupees and relics.
 
 Relic Progression
-Three relics must be collected before entering the cave dungeon.
+Three relics must be collected to unlock the final cave.
 
 Trade System
-NPC merchants can restore health in exchange for rupees.
+Merchants can restore health for rupees.
 
 ---
 
-## 🧭 Quest System
+# Main Quest
 
-The main progression loop:
+The core progression loop:
 
 1. Train in the **Courtyard**
-2. Explore the districts
+2. Explore Elmwood districts
 3. Recover **three relics**
 4. Unlock the **Ancient Cave**
-5. Defeat the **Tunnel Warden**
+5. Defeat the cave boss
 
 The interface displays:
 
+* Player health
+* Magic energy
+* Rupees
+* Relic progress
 * Current area
 * Quest hint
-* Player stats
-* Rupee count
-* Relic progress
 
 ---
 
-# 🎮 Controls
+# Controls
 
-| Key                      | Action          |
-| ------------------------ | --------------- |
-| **W A S D / Arrow Keys** | Move            |
-| **Space**                | Sword attack    |
-| **E**                    | Interact / talk |
-| **Left CTRL**            | Use magic heal  |
-| **M**                    | Upgrade menu    |
-| **Q**                    | Switch weapon   |
-| **R**                    | Restart game    |
+| Key                  | Action          |
+| -------------------- | --------------- |
+| W A S D / Arrow Keys | Move            |
+| Space                | Sword attack    |
+| E                    | Interact / talk |
+| Left CTRL            | Magic heal      |
+| Q                    | Change weapon   |
+| M                    | Upgrade menu    |
+| R                    | Restart game    |
 
 ---
 
-# ▶ Running the Game
+# Running the Game
 
-### 1. Install Python
+## 1. Install Python 3.12
 
-Make sure Python **3.10+** is installed.
+Download Python:
 
-You can check with:
+https://www.python.org/downloads/
+
+Verify installation:
 
 ```
 python --version
 ```
 
+You should see:
+
+```
+Python 3.12.x
+```
+
 ---
 
-### 2. Install Dependencies
+## 2. Install Dependencies
 
 Install Pygame:
 
@@ -154,44 +174,49 @@ pip install pygame
 
 ---
 
-### 3. Run the Game
+## 3. Run the Game
 
-Navigate to the project folder and run:
+Navigate to the **Code** folder:
 
 ```
-python Code/Main.py
+cd Zelda-with-Python-main/Code
 ```
 
-The game window should open and start the Elmwood adventure.
+Run the game:
+
+```
+python Main.py
+```
+
+The game window should open and begin the adventure.
 
 ---
 
-# 🧪 Technologies Used
+# Technologies Used
 
-* Python
+* Python 3.12
 * Pygame
 * Sprite-based game engine
-* Modular game architecture
-* Tile-based map system
-* Event-driven input handling
-* Basic AI enemy behavior
+* Tile map world system
+* Event-driven input
+* Basic enemy AI
+* Camera-follow rendering
 
 ---
 
-# 📌 Future Improvements
+# Future Improvements
 
-Possible future upgrades include:
+Planned upgrades include:
 
-* Custom Elmwood tile set and buildings
-* Inventory and equipment system
-* Expanded magic spells
-* Sound effects and music
-* NPC quest chains
-* Larger overworld map
-* Dungeon puzzles
-* Multiplayer battles
-* Dialogue trees
+* Custom Elmwood tile graphics
+* More enemy types
+* Inventory system
+* Additional magic abilities
+* Dialogue system
 * Save / load system
+* Sound effects and music
+* Larger overworld
+* Dungeon puzzles
 
 ---
 
@@ -199,14 +224,14 @@ Possible future upgrades include:
 
 **Logan Garth Goodwin**
 
-IT and Cybersecurity professional focused on learning through **hands-on experimentation, building projects, and solving technical problems**.
+IT and Cybersecurity student focused on building practical projects and learning through hands-on experimentation.
 
-I enjoy working with:
+Interests include:
 
 * networking
-* system design
 * cybersecurity
-* programming projects
+* system architecture
+* programming
 * game development experiments
 
 LinkedIn
@@ -214,4 +239,4 @@ https://www.linkedin.com/in/logan-g-goodwin/
 
 ---
 
-If you enjoy the project or want to improve it, feel free to fork the code and experiment with your own ideas.
+If you enjoy the project, feel free to fork the code and experiment with your own ideas.
